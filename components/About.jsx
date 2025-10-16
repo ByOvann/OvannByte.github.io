@@ -37,7 +37,7 @@ function About() {
               <h2 className="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
                 Tentang{' '}
                 <span className="gradient-primary bg-clip-text text-transparent">
-                  Saya
+                  Perjalanan Saya
                 </span>
               </h2>
               <div className="w-20 h-1 gradient-primary rounded-full mb-8"></div>
@@ -45,36 +45,46 @@ function About() {
 
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
-                Saya adalah seorang <strong className="text-gray-900">Web Developer</strong> yang passionate dalam menciptakan 
-                pengalaman digital yang menakjubkan. Dengan pengalaman lebih dari <strong className="text-gray-900">5 tahun</strong> 
-                di industri teknologi, saya telah mengembangkan keahlian dalam berbagai teknologi modern.
+                Halo! Saya adalah seorang <strong className="text-gray-900">Web Developer</strong> yang juga 
+                <strong className="text-gray-900"> Digital Nomad</strong>. Perjalanan saya di dunia teknologi 
+                dimulai lebih dari <strong className="text-gray-900">5 tahun</strong> yang lalu, dan sejak itu 
+                saya telah mengombinasikan passion coding dengan kecintaan terhadap traveling.
               </p>
               
               <p>
-                Saya percaya bahwa <em>desain yang baik tidak hanya tentang estetika</em>, tetapi juga tentang 
-                fungsionalitas dan pengalaman pengguna yang optimal. Setiap proyek yang saya kerjakan 
-                selalu mengutamakan kualitas, performa, dan kepuasan klien.
+                Saya percaya bahwa <em>pengalaman hidup yang beragam</em> membuat saya menjadi developer yang 
+                lebih kreatif dan inovatif. Dari bekerja di café-café di Bali hingga coding di co-working space 
+                di Tokyo, setiap tempat memberikan inspirasi baru untuk project-project saya.
               </p>
               
               <p>
-                Ketika tidak sedang coding, saya senang menjelajahi teknologi baru, membaca buku tentang 
-                pengembangan diri, dan berkontribusi pada komunitas open source.
+                Selain coding dan traveling, saya juga memiliki berbagai hobi seperti fotografi, hiking, 
+                kuliner, dan membuat konten digital. Saya suka berbagi pengalaman melalui blog dan media sosial.
+              </p>
+
+              <p>
+                <strong className="text-gray-900">Mission saya:</strong> Menciptakan solusi teknologi yang 
+                berdampak positif sambil mengeksplorasi keindahan dunia dan budaya yang beragam.
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
+            {/* Life Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-primary bg-clip-text text-transparent">50+</div>
+                <div className="text-3xl font-bold gradient-primary bg-clip-text text-transparent">15+</div>
+                <div className="text-sm text-gray-600 font-medium">Kota Dikunjungi</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-secondary bg-clip-text text-transparent">50+</div>
                 <div className="text-sm text-gray-600 font-medium">Project Selesai</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-secondary bg-clip-text text-transparent">5+</div>
-                <div className="text-sm text-gray-600 font-medium">Tahun Pengalaman</div>
+                <div className="text-3xl font-bold gradient-accent bg-clip-text text-transparent">10+</div>
+                <div className="text-sm text-gray-600 font-medium">Hobi Aktif</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-accent bg-clip-text text-transparent">30+</div>
-                <div className="text-sm text-gray-600 font-medium">Klien Puas</div>
+                <div className="text-3xl font-bold gradient-warm bg-clip-text text-transparent">1000+</div>
+                <div className="text-sm text-gray-600 font-medium">Foto Travel</div>
               </div>
             </div>
           </div>
@@ -88,22 +98,24 @@ function About() {
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 rounded-full gradient-primary p-0.5">
                     <div className="w-full h-full rounded-full bg-white flex items-center justify-center text-2xl">
-                      🚀
+                      🌍
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-xl text-gray-900">John Doe</h3>
-                    <p className="text-gray-600">Senior Web Developer</p>
+                    <h3 className="font-semibold text-xl text-gray-900">Digital Nomad</h3>
+                    <p className="text-gray-600">Developer & Explorer</p>
                   </div>
                 </div>
 
                 {/* Info List */}
                 <div className="space-y-4">
                   {[
-                    { icon: '📍', label: 'Location', value: 'Jakarta, Indonesia' },
-                    { icon: '🎓', label: 'Education', value: 'Computer Science, UI' },
-                    { icon: '💼', label: 'Experience', value: '5+ Years' },
+                    { icon: '📍', label: 'Current Location', value: 'Bali, Indonesia' },
+                    { icon: '🎓', label: 'Education', value: 'Computer Science' },
+                    { icon: '💼', label: 'Work Style', value: 'Remote & Flexible' },
                     { icon: '🌐', label: 'Languages', value: 'ID, EN, JP' },
+                    { icon: '✈️', label: 'Travel Style', value: 'Backpacker & Digital' },
+                    { icon: '📷', label: 'Content Creator', value: 'Tech & Travel' },
                   ].map((item, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <span className="text-2xl">{item.icon}</span>
@@ -115,10 +127,28 @@ function About() {
                   ))}
                 </div>
 
-                {/* Download CV Button */}
-                <button className="w-full py-3 gradient-secondary text-white font-semibold rounded-xl hover-lift transition-all duration-300 hover:shadow-lg">
-                  Download CV
-                </button>
+                {/* Social Links */}
+                <div className="pt-4 border-t border-gray-200">
+                  <h4 className="font-semibold text-gray-900 mb-3">Follow My Journey</h4>
+                  <div className="flex space-x-3">
+                    {[
+                      { icon: '📷', name: 'Instagram', url: 'https://instagram.com/yourhandle' },
+                      { icon: '📱', name: 'TikTok', url: 'https://tiktok.com/@yourhandle' },
+                      { icon: '✈️', name: 'Travel Blog', url: '#' },
+                    ].map((social, index) => (
+                      <a
+                        key={index}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-lg hover:scale-110 hover:shadow-lg transition-all duration-300"
+                        title={social.name}
+                      >
+                        {social.icon}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 

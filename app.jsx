@@ -13,6 +13,8 @@ function App() {
         window.Skills &&
         window.Experience &&
         window.Portfolio &&
+        window.Travel &&
+        window.Hobbies &&
         window.Contact &&
         window.Footer
       ) {
@@ -33,7 +35,7 @@ function App() {
           <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-t-purple-600 rounded-full animate-spin" style={{animationDirection: 'reverse', animationDuration: '0.8s'}}></div>
         </div>
         <p className="mt-6 text-gray-600 text-lg font-medium">Loading portfolio...</p>
-        <p className="mt-2 text-gray-400 text-sm">Please wait while we prepare everything for you</p>
+        <p className="mt-2 text-gray-400 text-sm">Menyiapkan perjalanan hidup saya untuk Anda</p>
       </div>
     );
   }
@@ -47,6 +49,8 @@ function App() {
         <window.Skills />
         <window.Experience />
         <window.Portfolio />
+        <window.Travel />
+        <window.Hobbies />
         <window.Contact />
       </main>
       <window.Footer />

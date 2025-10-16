@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ['Web Developer', 'UI/UX Designer', 'Frontend Developer', 'Creative Coder'];
+  const roles = ['Web Developer', 'Digital Nomad', 'Adventure Seeker', 'Tech Enthusiast', 'Content Creator'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,7 +36,7 @@ function Hero() {
           <div className="relative mx-auto w-32 h-32 md:w-40 md:h-40 mb-8">
             <div className="w-full h-full rounded-full gradient-primary p-1 animate-pulse-glow">
               <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-4xl md:text-5xl">
-                👤
+                🌍
               </div>
             </div>
           </div>
@@ -44,38 +44,78 @@ function Hero() {
           {/* Main Text */}
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 leading-tight">
-              Halo, Saya{' '}
+              Selamat Datang di{' '}
               <span className="gradient-primary bg-clip-text text-transparent">
-                John Doe
+                Perjalanan Saya
               </span>
             </h1>
             
             <div className="text-xl md:text-2xl lg:text-3xl text-gray-600 font-medium min-h-[2rem]">
-              Saya seorang{' '}
+              Saya{' '}
               <span className="gradient-secondary bg-clip-text text-transparent font-semibold transition-all duration-500">
                 {roles[currentRole]}
               </span>
             </div>
             
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto animate-typewriter">
-              Passionate tentang menciptakan pengalaman digital yang menakjubkan dan solusi inovatif untuk masa depan yang lebih baik.
+              Mengeksplorasi dunia teknologi, menjelajahi tempat-tempat indah, dan mengejar passion dalam kehidupan digital modern.
             </p>
+          </div>
+
+          {/* Journey Highlights */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mt-8">
+            {[
+              { icon: '💻', label: 'Coding', count: '5+ Tahun' },
+              { icon: '✈️', label: 'Travel', count: '15+ Kota' },
+              { icon: '📱', label: 'Projects', count: '50+ Project' },
+              { icon: '🎯', label: 'Hobi', count: '10+ Minat' },
+            ].map((item, index) => (
+              <div key={index} className="glass-morphism rounded-lg p-4 hover-lift">
+                <div className="text-2xl mb-2">{item.icon}</div>
+                <div className="text-sm font-medium text-gray-600">{item.label}</div>
+                <div className="text-lg font-bold gradient-primary bg-clip-text text-transparent">{item.count}</div>
+              </div>
+            ))}
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <button
-              onClick={() => scrollToSection('portfolio')}
+              onClick={() => scrollToSection('about')}
               className="px-8 py-4 gradient-primary text-white font-semibold rounded-full hover-lift transform transition-all duration-300 hover:scale-105 shadow-lg"
             >
-              Lihat Portfolio
+              Kenali Saya Lebih Dekat
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('travel')}
               className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-full border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-all duration-300 hover-lift shadow-lg"
             >
-              Hubungi Saya
+              Lihat Perjalanan
             </button>
+          </div>
+
+          {/* Social Media Quick Links */}
+          <div className="flex justify-center space-x-6 mt-8">
+            {[
+              { icon: '📷', name: 'Instagram', url: 'https://instagram.com/yourhandle' },
+              { icon: '🐙', name: 'GitHub', url: 'https://github.com/yourusername' },
+              { icon: '💼', name: 'LinkedIn', url: 'https://linkedin.com/in/yourprofile' },
+              { icon: '📱', name: 'TikTok', url: 'https://tiktok.com/@yourhandle' },
+              { icon: '🐦', name: 'Twitter', url: 'https://twitter.com/yourhandle' },
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 glass-morphism rounded-full flex items-center justify-center text-xl hover:scale-110 hover:shadow-lg transition-all duration-300 group"
+                title={social.name}
+              >
+                <span className="group-hover:scale-110 transition-transform duration-200">
+                  {social.icon}
+                </span>
+              </a>
+            ))}
           </div>
 
           {/* Scroll Indicator */}

@@ -8,61 +8,69 @@ function Experience() {
       title: 'Senior Frontend Developer',
       company: 'TechCorp Indonesia',
       period: '2022 - Sekarang',
-      location: 'Jakarta, Indonesia',
-      description: 'Memimpin tim frontend dalam pengembangan aplikasi web scalable menggunakan React.js dan Next.js. Bertanggung jawab atas arsitektur frontend dan optimasi performa.',
+      location: 'Remote / Bali',
+      description: 'Memimpin tim frontend dalam pengembangan aplikasi web scalable sambil menjalani lifestyle digital nomad. Bertanggung jawab atas arsitektur frontend dan optimasi performa.',
       achievements: [
         'Meningkatkan performa aplikasi hingga 40%',
-        'Memimpin tim 5 developer frontend',
-        'Implementasi design system perusahaan'
+        'Memimpin tim 5 developer remote',
+        'Implementasi design system perusahaan',
+        'Mentoring junior developers across timezones'
       ],
-      tech: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+      tech: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'GraphQL'],
       icon: '💻',
-      color: 'gradient-primary'
+      color: 'gradient-primary',
+      lifestyle: 'Bekerja dari berbagai kota sambil traveling'
     },
     {
-      title: 'Fullstack Developer',
+      title: 'Fullstack Developer & Content Creator',
       company: 'Digital Startup',
       period: '2020 - 2022',
-      location: 'Remote',
-      description: 'Mengembangkan aplikasi web end-to-end menggunakan MERN stack. Terlibat dalam proses product development dari ideation hingga deployment.',
+      location: 'Remote / Multi-City',
+      description: 'Mengembangkan aplikasi web end-to-end menggunakan MERN stack sambil membuat konten edukasi tentang programming dan remote work lifestyle.',
       achievements: [
         'Membangun 3 produk MVP dari zero to launch',
         'Mengimplementasi CI/CD pipeline',
-        'Mengelola database dengan 10M+ records'
+        'Mengelola database dengan 10M+ records',
+        'Membangun following 5K+ di YouTube'
       ],
-      tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
+      tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'AWS'],
       icon: '🚀',
-      color: 'gradient-secondary'
+      color: 'gradient-secondary',
+      lifestyle: 'Nomadic lifestyle dimulai dari periode ini'
     },
     {
-      title: 'Frontend Developer',
+      title: 'Frontend Developer & Travel Blogger',
       company: 'Creative Agency',
       period: '2019 - 2020',
-      location: 'Bandung, Indonesia',
-      description: 'Mengembangkan website dan aplikasi web untuk berbagai klien dari berbagai industri. Fokus pada user experience dan responsive design.',
+      location: 'Bandung / Southeast Asia',
+      description: 'Mengembangkan website dan aplikasi web untuk berbagai klien sambil mulai eksplorasi travel blogging dan dokumentasi perjalanan.',
       achievements: [
         'Menyelesaikan 20+ project klien',
         'Meningkatkan conversion rate hingga 25%',
-        'Implementasi best practices SEO'
+        'Implementasi best practices SEO',
+        'Mulai travel blog dengan 1K+ readers'
       ],
-      tech: ['HTML5', 'CSS3', 'JavaScript', 'WordPress'],
+      tech: ['HTML5', 'CSS3', 'JavaScript', 'WordPress', 'Photoshop'],
       icon: '🎨',
-      color: 'gradient-accent'
+      color: 'gradient-accent',
+      lifestyle: 'Weekend trips dan dokumentasi kuliner lokal'
     },
     {
       title: 'Junior Web Developer',
       company: 'Local Software House',
       period: '2018 - 2019',
-      location: 'Yogyakarta, Indonesia',
-      description: 'Memulai karir sebagai web developer dengan fokus pada pengembangan website corporate dan e-commerce. Belajar fundamental programming dan best practices.',
+      location: 'Yogyakarta',
+      description: 'Memulai karir sebagai web developer dengan fokus pada pengembangan website corporate. Periode pembelajaran fundamental programming dan discovery passion untuk travel.',
       achievements: [
         'Menguasai fundamental web development',
         'Berkontribusi pada 15+ project',
-        'Mendapat promosi dalam 8 bulan'
+        'Mendapat promosi dalam 8 bulan',
+        'Mulai hobby fotografi dan hiking'
       ],
-      tech: ['PHP', 'MySQL', 'jQuery', 'Bootstrap'],
+      tech: ['PHP', 'MySQL', 'jQuery', 'Bootstrap', 'Git'],
       icon: '📱',
-      color: 'gradient-warm'
+      color: 'gradient-warm',
+      lifestyle: 'Eksplorasi wisata lokal Yogyakarta di weekend'
     }
   ];
 
@@ -96,13 +104,13 @@ function Experience() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
-            Pengalaman{' '}
+            Coding{' '}
             <span className="gradient-primary bg-clip-text text-transparent">
-              Kerja
+              Journey
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Perjalanan karir saya dalam dunia teknologi dan pengembangan perangkat lunak
+            Perjalanan karir saya dalam dunia teknologi - dari junior developer lokal hingga digital nomad
           </p>
           <div className="w-20 h-1 gradient-primary rounded-full mx-auto mt-6"></div>
         </div>
@@ -157,6 +165,15 @@ function Experience() {
                       {exp.description}
                     </p>
 
+                    {/* Lifestyle */}
+                    <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                      <div className="flex items-center">
+                        <span className="text-blue-500 mr-2">🌟</span>
+                        <span className="font-medium text-blue-900">Lifestyle: </span>
+                        <span className="text-blue-700 ml-1">{exp.lifestyle}</span>
+                      </div>
+                    </div>
+
                     {/* Achievements */}
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-900 mb-2">Key Achievements:</h4>
@@ -194,24 +211,42 @@ function Experience() {
           </div>
         </div>
 
-        {/* Summary Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { number: '5+', label: 'Tahun Pengalaman', icon: '⏱️' },
-            { number: '50+', label: 'Project Selesai', icon: '🚀' },
-            { number: '4', label: 'Perusahaan', icon: '🏢' },
-            { number: '30+', label: 'Klien Puas', icon: '😊' },
-          ].map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                {stat.icon}
+        {/* Journey Highlights */}
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-10">
+            Journey Highlights
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: '5+', label: 'Tahun Coding', icon: '⏱️', detail: 'From junior to senior' },
+              { number: '15+', label: 'Kota Remote Work', icon: '🌍', detail: 'Across 3 continents' },
+              { number: '50+', label: 'Project Delivered', icon: '🚀', detail: 'Various industries' },
+              { number: '5K+', label: 'Community Following', icon: '👥', detail: 'Tech & travel content' },
+            ].map((stat, index) => (
+              <div key={index} className="text-center group glass-morphism rounded-xl p-6 hover-lift">
+                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl font-bold gradient-primary bg-clip-text text-transparent mb-1">
+                  {stat.number}
+                </div>
+                <div className="text-gray-900 text-sm font-semibold mb-1">{stat.label}</div>
+                <div className="text-gray-500 text-xs">{stat.detail}</div>
               </div>
-              <div className="text-3xl font-bold gradient-primary bg-clip-text text-transparent mb-1">
-                {stat.number}
-              </div>
-              <div className="text-gray-600 text-sm font-medium">{stat.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Philosophy */}
+        <div className="mt-16 glass-morphism rounded-2xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            💭 Coding Philosophy
+          </h3>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            "Coding bukan hanya tentang menulis kode, tapi tentang menyelesaikan masalah nyata dan menciptakan 
+            impact positif. Setiap tempat yang saya kunjungi, setiap budaya yang saya alami, memberikan 
+            perspektif baru yang membuat saya menjadi developer yang lebih baik."
+          </p>
         </div>
       </div>
     </section>

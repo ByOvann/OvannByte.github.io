@@ -36,7 +36,7 @@ function Header() {
             className="font-display font-bold text-xl lg:text-2xl cursor-pointer gradient-primary bg-clip-text text-transparent"
             onClick={() => scrollToSection('hero')}
           >
-            Profil Saya
+            Perjalanan Saya
           </div>
 
           {/* Desktop Navigation */}
@@ -45,8 +45,10 @@ function Header() {
               { id: 'hero', label: 'Beranda' },
               { id: 'about', label: 'Tentang' },
               { id: 'skills', label: 'Keahlian' },
-              { id: 'experience', label: 'Pengalaman' },
+              { id: 'experience', label: 'Coding Journey' },
               { id: 'portfolio', label: 'Portfolio' },
+              { id: 'travel', label: 'Travel' },
+              { id: 'hobbies', label: 'Hobi' },
               { id: 'contact', label: 'Kontak' }
             ].map((item) => (
               <button
@@ -88,8 +90,10 @@ function Header() {
               { id: 'hero', label: 'Beranda' },
               { id: 'about', label: 'Tentang' },
               { id: 'skills', label: 'Keahlian' },
-              { id: 'experience', label: 'Pengalaman' },
+              { id: 'experience', label: 'Coding Journey' },
               { id: 'portfolio', label: 'Portfolio' },
+              { id: 'travel', label: 'Travel' },
+              { id: 'hobbies', label: 'Hobi' },
               { id: 'contact', label: 'Kontak' }
             ].map((item) => (
               <button

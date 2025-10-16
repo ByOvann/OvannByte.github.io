@@ -7,18 +7,30 @@ function Footer() {
     { name: 'Beranda', href: '#hero' },
     { name: 'Tentang', href: '#about' },
     { name: 'Keahlian', href: '#skills' },
-    { name: 'Pengalaman', href: '#experience' },
+    { name: 'Coding Journey', href: '#experience' },
     { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Travel', href: '#travel' },
+    { name: 'Hobi', href: '#hobbies' },
     { name: 'Kontak', href: '#contact' },
   ];
 
   const socialLinks = [
-    { icon: '💼', name: 'LinkedIn', url: 'https://linkedin.com/in/johndoe' },
-    { icon: '🐙', name: 'GitHub', url: 'https://github.com/johndoe' },
-    { icon: '🐦', name: 'Twitter', url: 'https://twitter.com/johndoe' },
-    { icon: '📷', name: 'Instagram', url: 'https://instagram.com/johndoe' },
-    { icon: '📧', name: 'Email', url: 'mailto:john.doe@email.com' },
+    { icon: '💼', name: 'LinkedIn', url: 'https://linkedin.com/in/yourprofile' },
+    { icon: '🐙', name: 'GitHub', url: 'https://github.com/yourusername' },
+    { icon: '📷', name: 'Instagram', url: 'https://instagram.com/yourhandle' },
+    { icon: '📱', name: 'TikTok', url: 'https://tiktok.com/@yourhandle' },
+    { icon: '🐦', name: 'Twitter', url: 'https://twitter.com/yourhandle' },
+    { icon: '🎥', name: 'YouTube', url: 'https://youtube.com/@yourchannel' },
+    { icon: '✈️', name: 'Travel Blog', url: 'https://yourblog.com' },
+    { icon: '📧', name: 'Email', url: 'mailto:your.email@gmail.com' },
   ];
+
+  const currentStatus = {
+    location: 'Bali, Indonesia',
+    timezone: 'UTC+8',
+    status: 'Available for projects',
+    lastUpdate: 'Currently in Ubud'
+  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId.replace('#', ''));
@@ -49,32 +61,54 @@ function Footer() {
               className="font-display font-bold text-2xl mb-4 gradient-primary bg-clip-text text-transparent cursor-pointer"
               onClick={scrollToTop}
             >
-              John Doe
+              Digital Nomad Journey
             </div>
             <p className="text-gray-400 text-lg mb-6 max-w-md">
-              Web Developer yang passionate dalam menciptakan pengalaman digital yang menakjubkan 
-              dan solusi inovatif untuk masa depan yang lebih baik.
+              Mengeksplorasi dunia teknologi sambil menjelajahi keindahan planet ini. 
+              Berbagi perjalanan coding, travel, dan passion melalui konten digital.
             </p>
+            
+            {/* Current Status */}
+            <div className="glass-morphism-dark rounded-lg p-4 mb-6">
+              <h4 className="font-semibold text-white mb-3 flex items-center">
+                <span className="mr-2">📍</span>
+                Current Status
+              </h4>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Location:</span>
+                  <span className="text-white">{currentStatus.location}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Timezone:</span>
+                  <span className="text-white">{currentStatus.timezone}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Status:</span>
+                  <span className="text-green-400">{currentStatus.status}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Update:</span>
+                  <span className="text-blue-400">{currentStatus.lastUpdate}</span>
+                </div>
+              </div>
+            </div>
             
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-400">
-                <span className="mr-3 text-lg">📍</span>
-                <span>Jakarta, Indonesia</span>
-              </div>
-              <div className="flex items-center text-gray-400">
                 <span className="mr-3 text-lg">📧</span>
                 <a 
-                  href="mailto:john.doe@email.com" 
+                  href="mailto:your.email@gmail.com" 
                   className="hover:text-white transition-colors duration-200"
                 >
-                  john.doe@email.com
+                  your.email@gmail.com
                 </a>
               </div>
               <div className="flex items-center text-gray-400">
                 <span className="mr-3 text-lg">📱</span>
                 <a 
-                  href="tel:+6281234567890" 
+                  href="https://wa.me/6281234567890" 
                   className="hover:text-white transition-colors duration-200"
                 >
                   +62 812-3456-7890
@@ -85,7 +119,7 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6">Quick Navigation</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -100,17 +134,59 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services & Interests */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
+            <h3 className="text-lg font-semibold mb-6">What I Do</h3>
             <ul className="space-y-3 text-gray-400">
-              <li>Web Development</li>
-              <li>UI/UX Design</li>
-              <li>Mobile App Development</li>
-              <li>E-commerce Solutions</li>
-              <li>Consulting</li>
-              <li>Maintenance & Support</li>
+              <li className="flex items-center">
+                <span className="mr-2">💻</span>
+                Web Development
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">🎨</span>
+                UI/UX Design
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">📱</span>
+                Content Creation
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">✈️</span>
+                Travel Documentation
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">📷</span>
+                Photography
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">🎓</span>
+                Tech Mentoring
+              </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Social Media Section */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <h3 className="text-xl font-semibold mb-6 text-center">
+            Follow My Journey Across Platforms
+          </h3>
+          <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 hover:scale-105 transition-all duration-300 group"
+                title={social.name}
+              >
+                <span className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">
+                  {social.icon}
+                </span>
+                <span className="text-xs text-gray-400 text-center">{social.name}</span>
+              </a>
+            ))}
           </div>
         </div>
 
@@ -118,10 +194,11 @@ function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="max-w-md mx-auto text-center lg:text-left lg:mx-0">
             <h3 className="text-xl font-semibold mb-4">
-              Subscribe to My Newsletter
+              🚀 Join My Journey Newsletter
             </h3>
             <p className="text-gray-400 mb-6">
-              Dapatkan update terbaru tentang teknologi dan tips development
+              Dapatkan update tentang perjalanan coding, travel tips, dan insights tentang 
+              digital nomad lifestyle langsung di inbox Anda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <input
@@ -142,26 +219,19 @@ function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Copyright */}
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} John Doe. All rights reserved. Made with ❤️ in Indonesia
+            <div className="text-gray-400 text-sm mb-4 md:mb-0 text-center md:text-left">
+              © {currentYear} Digital Nomad Journey. Made with ❤️ while traveling the world.
+              <br className="md:hidden" />
+              <span className="hidden md:inline"> | </span>
+              Currently coding from {currentStatus.location}
             </div>
 
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-lg hover:bg-gray-700 hover:scale-110 transition-all duration-300 group"
-                  title={social.name}
-                >
-                  <span className="group-hover:scale-110 transition-transform duration-200">
-                    {social.icon}
-                  </span>
-                </a>
-              ))}
+            {/* Status Indicator */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
+                <span className="text-gray-400 text-sm">Available for projects</span>
+              </div>
             </div>
           </div>
         </div>
